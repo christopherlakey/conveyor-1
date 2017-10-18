@@ -285,6 +285,11 @@
             <id>bintray-em2m-maven</id>
             <url>https://api.bintray.com/maven/em2m/em2m-maven/conveyor;publish=1</url>
         </repository>
+        <snapshotRepository>
+            <id>elasticm2m-snapshot</id>
+            <name>libs-snapshot</name>
+            <url>http://artifactory.elasticm2m.com:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
