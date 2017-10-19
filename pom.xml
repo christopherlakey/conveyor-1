@@ -26,7 +26,7 @@
     <artifactId>conveyor-parent</artifactId>
     <packaging>pom</packaging>
     <name>conveyor-parent</name>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
 
     <modules>
         <module>core</module>
@@ -261,6 +261,30 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -282,15 +306,9 @@
 
     <distributionManagement>
         <repository>
-            <id>elasticm2m-release</id>
-            <name>libs-release</name>
-            <url>http://artifactory.elasticm2m.com:8081/artifactory/libs-release-local</url>
+            <id>bintray-em2m-maven</id>
+            <url>https://api.bintray.com/maven/em2m/em2m-maven/conveyor/;publish=1</url>
         </repository>
-        <snapshotRepository>
-            <id>elasticm2m-snapshot</id>
-            <name>libs-snapshot</name>
-            <url>http://artifactory.elasticm2m.com:8081/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
     </distributionManagement>
 
 </project>
