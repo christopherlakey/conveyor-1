@@ -269,7 +269,7 @@
             <id>jcenter</id>
             <url>http://jcenter.bintray.com</url>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
                 <checksumPolicy>warn</checksumPolicy>
             </snapshots>
@@ -283,13 +283,8 @@
     <distributionManagement>
         <repository>
             <id>bintray-em2m-maven</id>
-            <url>https://api.bintray.com/maven/em2m/em2m-maven/conveyor;publish=1</url>
+            <url>https://api.bintray.com/maven/em2m/em2m-maven/conveyor/;publish=1</url>
         </repository>
-        <snapshotRepository>
-            <id>elasticm2m-snapshot</id>
-            <name>libs-snapshot</name>
-            <url>http://artifactory.elasticm2m.com:8081/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
     </distributionManagement>
 
 </project>
