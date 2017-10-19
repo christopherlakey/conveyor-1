@@ -1,6 +1,7 @@
 package io.em2m.conveyor.core
 
 import com.google.inject.Guice
+import com.google.inject.Injector
 import com.google.inject.Module
 import rx.Observable
 import kotlin.reflect.KClass
@@ -34,6 +35,12 @@ class BasicProcessor<T>(val flowResolver: FlowResolver<T>, val standardXforms: L
         private val classes = HashMap<String, KClass<out Flow<T>>>()
         private val instances = HashMap<String, Flow<T>>()
         private val modules = ArrayList<Module>()
+        private var injector: Injector? = null
+
+        fun injector(injector: Injector): Builder<T> {
+            this.injector = injector
+            return this
+        }
 
         fun module(module: Module): Builder<T> {
             modules.add(module)
@@ -51,7 +58,7 @@ class BasicProcessor<T>(val flowResolver: FlowResolver<T>, val standardXforms: L
         }
 
         fun build(): Processor<T> {
-            val injector = Guice.createInjector(modules)
+            val injector = injector?.createChildInjector(modules) ?: Guice.createInjector(modules)
             val resolver = LookupFlowResolver(injector, classes, instances)
             return BasicProcessor(resolver)
         }
