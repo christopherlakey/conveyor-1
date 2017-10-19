@@ -269,7 +269,7 @@
             <id>jcenter</id>
             <url>http://jcenter.bintray.com</url>
             <snapshots>
-                <enabled>true</enabled>
+                <enabled>false</enabled>
                 <updatePolicy>never</updatePolicy>
                 <checksumPolicy>warn</checksumPolicy>
             </snapshots>
