@@ -28,9 +28,9 @@
         <version>2.3.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>conveyor-core</artifactId>
+    <artifactId>conveyor-flows</artifactId>
     <packaging>jar</packaging>
-    <name>conveyor-core</name>
+    <name>conveyor-flows</name>
 
     <dependencies>
 

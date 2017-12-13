@@ -43,7 +43,7 @@
 
         <dependency>
             <groupId>io.em2m.conveyor</groupId>
-            <artifactId>conveyor-core</artifactId>
+            <artifactId>conveyor-flows</artifactId>
             <version>${project.version}</version>
         </dependency>
 
