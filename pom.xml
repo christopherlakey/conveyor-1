@@ -31,6 +31,8 @@
     <modules>
         <module>flows</module>
         <module>actions</module>
+        <module>simplex</module>
+        <module>policy</module>
     </modules>
 
     <properties>
@@ -146,12 +148,6 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-kotlin</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-smile</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
 
